@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTENTION DEFICIT | Official Website</title>
+    <style>
+        :root {
+            --bg-color: #0b0b0c;
+            --card-bg: #131315;
+            --accent-color: #ff5500;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Helvetica Neue', -apple-system, Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header-banner {
+            width: 100%;
+            height: 45vh; 
+            min-height: 320px;
+            background: url('YouTube Cover.png') no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-bottom: 2px solid #222;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner { height: 350px; }
+        }
+
+        .ticker-wrap {
+            background: var(--accent-color);
+            color: #000000;
+            padding: 14px 0;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(255, 85, 0, 0.3);
+        }
+
+        .ticker {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        .ticker span { display: inline-block; padding: 0 2rem; font-size: 1.2rem; }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        .main-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .grid-split {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) { .grid-split { grid-template-columns: 1fr; gap: 40px; } }
+
+        .about-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .player-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #222;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            padding: 50px 40px;
+            border-radius: 16px;
+            border: 1px solid #222;
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .social-strip {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+        }
+
+        .social-strip a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .social-strip a:hover { color: var(--accent-color); }
+    </style>
+</head>
+<body>
+
+    <header class="header-banner"></header>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span>BBC RADIO 1 PLAYBACK</span> • <span>UK DJ & PRODUCER</span> • <span>NEW RELEASES OUT NOW</span> • <span>FOR BOOKINGS AND REMIXES</span> • <span>BBC RADIO 1 PLAYBACK</span> • <span>UK DJ & PRODUCER</span> •
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <div class="grid-split">
+            <div class="about-text">
+                <h2 class="section-title">About</h2>
+                <p>Forging heavy basslines with complex, high-energy rhythm structures, Attention Deficit has rapidly caught the ears of underground electronic music tastemakers across the UK.</p>
+                <p>Regularly supported by airplay and driving heavy club sets, the production merges pristine sound engineering with relentless energy.</p>
+            </div>
+            
+            <div class="player-card">
+                <h2 class="section-title" style="margin-bottom: 20px; border: none; padding: 0;">Listen</h2>
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
+            </div>
+        </div>
+
+        <section class="contact-card">
+            <h2 class="section-title" style="border: none; padding: 0; text-align: center; margin-bottom: 15px;">Booking & Inquiries</h2>
+            <p>For club bookings, general press, or remix requests, drop a direct email below.</p>
+            
+            <!-- Replace the email address below with your primary contact inbox address -->
+            <a href="mailto:info@attentiondeficit.uk" class="btn">Send Email</a>
+
+            <div class="social-strip">
+                <a href="#" target="_blank">SOUNDCLOUD</a>
+                <a href="#" target="_blank">INSTAGRAM</a>
+                <a href="#" target="_blank">TIKTOK</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
