@@ -43,15 +43,103 @@
     }
 
     .hero {
+      position: relative;
+      display: flex;
       width: 100%;
-      background: #000;
+      height: clamp(250px, 27vw, 390px);
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        linear-gradient(90deg, #101114 0%, #101114 22%, rgba(16, 17, 20, 0.92) 31%, rgba(16, 17, 20, 0) 50%),
+        url("header-art.png") right center / auto 100% no-repeat,
+        #101114;
       border-bottom: 2px solid #222;
     }
 
-    .hero img {
-      display: block;
-      width: 100%;
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(0, 0, 0, 0.08));
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-brand {
+      display: flex;
+      width: min(36vw, 430px);
+      min-width: 270px;
+      align-items: center;
+      gap: clamp(0.8rem, 1.7vw, 1.35rem);
+      margin-left: clamp(1.5rem, 6vw, 6rem);
+    }
+
+    .hero-logo-window {
+      position: relative;
+      width: clamp(82px, 9vw, 128px);
+      aspect-ratio: 1;
+      flex: 0 0 auto;
+      overflow: hidden;
+    }
+
+    .hero-logo-window img {
+      position: absolute;
+      width: 164%;
+      max-width: none;
       height: auto;
+      top: -32%;
+      left: -32%;
+    }
+
+    .hero-title {
+      font-size: clamp(1.65rem, 3.2vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 0.9;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        height: 225px;
+        align-items: flex-end;
+        background:
+          linear-gradient(90deg, rgba(16, 17, 20, 0.96) 0%, rgba(16, 17, 20, 0.76) 38%, rgba(16, 17, 20, 0.1) 75%),
+          url("header-art.png") 58% center / auto 100% no-repeat,
+          #101114;
+      }
+
+      .hero-brand {
+        width: auto;
+        min-width: 0;
+        gap: 0.75rem;
+        margin: 0 1.1rem 1.2rem;
+      }
+
+      .hero-logo-window {
+        width: 70px;
+      }
+
+      .hero-title {
+        font-size: clamp(1.45rem, 7vw, 2rem);
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero {
+        height: 205px;
+        background-position: 54% center;
+      }
+    }
+
+    .hero-fallback {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .ticker-wrap {
@@ -209,10 +297,7 @@
       letter-spacing: 0.06em;
       text-decoration: none;
       text-transform: uppercase;
-      transition:
-        background-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
+      transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
     }
 
     .button:hover {
@@ -246,10 +331,7 @@
       border: 1px solid var(--border);
       border-radius: 50%;
       text-decoration: none;
-      transition:
-        border-color 180ms ease,
-        background-color 180ms ease,
-        transform 180ms ease;
+      transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
     }
 
     .social-link:hover {
@@ -285,14 +367,16 @@
 </head>
 
 <body>
-  <header class="hero">
-    <img
-      src="YouTube Cover.png"
-      alt="Attention Deficit"
-      width="2560"
-      height="1440"
-      fetchpriority="high"
-    >
+  <header class="hero" aria-label="Attention Deficit">
+    <div class="hero-brand">
+      <div class="hero-logo-window" aria-hidden="true">
+        <img src="attention-deficit-logo.png" alt="">
+      </div>
+      <div class="hero-title">
+        <span>Attention</span>
+        <span>Deficit</span>
+      </div>
+    </div>
   </header>
 
   <div class="ticker-wrap" aria-label="Artist highlights">
@@ -303,7 +387,6 @@
         <span class="ticker-item">New releases out now</span>
         <span class="ticker-item">Bookings &amp; remixes</span>
       </div>
-
       <div class="ticker-group" aria-hidden="true">
         <span class="ticker-item">BBC Radio 1 playback</span>
         <span class="ticker-item">UK DJ &amp; producer</span>
@@ -317,22 +400,12 @@
     <div class="grid-split">
       <section class="about-text" aria-labelledby="about-title">
         <h1 class="section-title" id="about-title">About</h1>
-
-        <p>
-          Forging heavy basslines with complex, high-energy rhythm
-          structures, Attention Deficit has rapidly caught the ears of
-          underground electronic music tastemakers across the UK.
-        </p>
-
-        <p>
-          Regularly supported by airplay and driving heavy club sets, the
-          production merges pristine sound engineering with relentless energy.
-        </p>
+        <p>Forging heavy basslines with complex, high-energy rhythm structures, Attention Deficit has rapidly caught the ears of underground electronic music tastemakers across the UK.</p>
+        <p>Regularly supported by airplay and driving heavy club sets, the production merges pristine sound engineering with relentless energy.</p>
       </section>
 
       <section class="player-card" aria-labelledby="listen-title">
         <h2 class="section-title" id="listen-title">Listen</h2>
-
         <iframe
           class="soundcloud-player"
           title="Attention Deficit on SoundCloud"
@@ -340,33 +413,17 @@
           allow="autoplay"
           loading="lazy"
         ></iframe>
-
         <p class="soundcloud-fallback">
           Player not loading?
-          <a
-            href="https://soundcloud.com/joe-thwaites-1/tracks"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open all tracks on SoundCloud
-          </a>.
+          <a href="https://soundcloud.com/joe-thwaites-1/tracks" target="_blank" rel="noopener noreferrer">Open all tracks on SoundCloud</a>.
         </p>
       </section>
     </div>
 
     <section class="contact-card" aria-labelledby="contact-title">
-      <h2 class="section-title" id="contact-title">
-        Bookings &amp; enquiries
-      </h2>
-
-      <p>
-        For club bookings, press, general enquiries or remix requests,
-        get in touch directly.
-      </p>
-
-      <a class="button" href="mailto:info@attentiondeficit.uk">
-        Send email
-      </a>
+      <h2 class="section-title" id="contact-title">Bookings &amp; enquiries</h2>
+      <p>For club bookings, press, general enquiries or remix requests, get in touch directly.</p>
+      <a class="button" href="mailto:info@attentiondeficit.uk">Send email</a>
 
       <nav class="social-strip" aria-label="Follow Attention Deficit">
         <a
@@ -377,14 +434,8 @@
           aria-label="Attention Deficit on SoundCloud"
           title="SoundCloud"
         >
-          <img
-            src="https://cdn.simpleicons.org/soundcloud/ffffff"
-            alt=""
-            width="24"
-            height="24"
-          >
+          <img src="https://cdn.simpleicons.org/soundcloud/ffffff" alt="" width="24" height="24">
         </a>
-
         <a
           class="social-link"
           href="https://www.instagram.com/attentiondeficitproducer/"
@@ -393,14 +444,8 @@
           aria-label="Attention Deficit on Instagram"
           title="Instagram"
         >
-          <img
-            src="https://cdn.simpleicons.org/instagram/ffffff"
-            alt=""
-            width="24"
-            height="24"
-          >
+          <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="" width="24" height="24">
         </a>
-
         <a
           class="social-link"
           href="https://www.tiktok.com/@attentiondeficitproducer"
@@ -409,12 +454,7 @@
           aria-label="Attention Deficit on TikTok"
           title="TikTok"
         >
-          <img
-            src="https://cdn.simpleicons.org/tiktok/ffffff"
-            alt=""
-            width="24"
-            height="24"
-          >
+          <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="" width="24" height="24">
         </a>
       </nav>
     </section>
@@ -425,8 +465,7 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
