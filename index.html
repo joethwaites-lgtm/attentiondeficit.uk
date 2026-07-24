@@ -1,187 +1,984 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Attention Deficit — UK DJ and producer. Listen to the latest tracks and get in touch for bookings, press and remixes.">
-  <meta name="theme-color" content="#0b0b0c">
-  <title>ATTENTION DEFICIT | Official Website</title>
+
+  <title>Attention Deficit UK | House &amp; Breakbeat DJ North East</title>
+  <meta name="description" content="Attention Deficit UK: live electronic hardware looping, House and Breakbeat DJ sets across Newcastle, Sunderland and the North East, urgent DJ cover UK-wide, and bespoke commercial sync licensing.">
+  <meta name="keywords" content="House &amp; Breakbeat DJ North East, Live Electronic Hardware Looping, Last-Minute Emergency DJ Cover UK, Bespoke Commercial Sync Licensing, Newcastle DJ, Sunderland DJ, UK festival DJ">
+  <meta name="author" content="Attention Deficit UK">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="canonical" href="https://attentiondeficit.uk/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Attention Deficit UK">
+  <meta property="og:title" content="Attention Deficit UK | Live Electronic Act &amp; DJ">
+  <meta property="og:description" content="Live hardware looping, House and Breakbeat DJ sets, emergency festival cover and premium media sync from the North East of England.">
+  <meta property="og:url" content="https://attentiondeficit.uk/">
+  <meta property="og:image" content="https://attentiondeficit.uk/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Attention Deficit UK — live electronic act, House and Breakbeat DJ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Attention Deficit UK | Live Electronic Act &amp; DJ">
+  <meta name="twitter:description" content="Live hardware looping, House and Breakbeat DJ sets, emergency festival cover and premium media sync.">
+  <meta name="twitter:image" content="https://attentiondeficit.uk/social-preview.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MusicGroup",
+        "@id": "https://attentiondeficit.uk/#artist",
+        "name": "Attention Deficit UK",
+        "alternateName": "Attention Deficit",
+        "url": "https://attentiondeficit.uk/",
+        "image": "https://attentiondeficit.uk/attention-deficit-banner.png",
+        "logo": "https://attentiondeficit.uk/attention-deficit-logo.png",
+        "description": "A North East England electronic music act delivering live hardware looping, House and Breakbeat DJ sets, short-notice UK festival cover and bespoke commercial sync licensing.",
+        "genre": [
+          "House",
+          "Breakbeat",
+          "Electronic",
+          "Balearic",
+          "Underground Dance Music"
+        ],
+        "email": "info@attentiondeficit.uk",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "North East England",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "North East England",
+            "addressCountry": "GB"
+          }
+        },
+        "location": [
+          {
+            "@type": "City",
+            "name": "Newcastle upon Tyne"
+          },
+          {
+            "@type": "City",
+            "name": "Sunderland"
+          }
+        ],
+        "sameAs": [
+          "https://soundcloud.com/joe-thwaites-1",
+          "https://www.instagram.com/attentiondeficitproducer/",
+          "https://www.tiktok.com/@attentiondeficitproducer"
+        ],
+        "makesOffer": {
+          "@type": "OfferCatalog",
+          "name": "Attention Deficit UK performance and music services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Live Electronic Hardware Looping",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "United Kingdom"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "House and Breakbeat DJ Sets",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "United Kingdom"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Last-Minute Emergency DJ Cover UK",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "United Kingdom"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Bespoke Commercial Sync Licensing",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "United Kingdom"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://attentiondeficit.uk/#website",
+        "url": "https://attentiondeficit.uk/",
+        "name": "Attention Deficit UK",
+        "inLanguage": "en-GB",
+        "publisher": {
+          "@id": "https://attentiondeficit.uk/#artist"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
-      --background: #0b0b0c;
-      --surface: #141416;
-      --surface-hover: #19191c;
-      --accent: #ff5500;
-      --text: #ffffff;
-      --muted: #aaaab0;
-      --border: #29292d;
-      --content-width: 1120px;
+      --black: #000000;
+      --near-black: #080808;
+      --surface: #101010;
+      --surface-raised: #161616;
+      --orange: #ff5500;
+      --orange-hot: #ff6a1a;
+      --white: #ffffff;
+      --muted: #b7b7b7;
+      --line: #292929;
+      --max-width: 1180px;
+      --shadow-orange: 0 0 18px rgba(255, 85, 0, 0.5);
     }
 
-    * {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 78px;
     }
 
     body {
       min-width: 320px;
+      margin: 0;
       overflow-x: hidden;
-      background: var(--background);
-      color: var(--text);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.6;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 85, 0, 0.055), transparent 25rem),
+        var(--black);
+      color: var(--white);
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     a {
       color: inherit;
     }
 
-    .hero {
-      position: relative;
-      display: flex;
-      width: 100%;
-      height: clamp(250px, 27vw, 390px);
-      align-items: center;
-      overflow: hidden;
-      isolation: isolate;
-      background:
-        linear-gradient(90deg, #101114 0%, #101114 22%, rgba(16, 17, 20, 0.92) 31%, rgba(16, 17, 20, 0) 50%),
-        url("header-art.png") right center / auto 100% no-repeat,
-        #101114;
-      border-bottom: 2px solid #222;
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
     }
 
-    .hero::after {
+    .skip-link {
+      position: fixed;
+      z-index: 999;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.75rem 1rem;
+      transform: translateY(-160%);
+      background: var(--orange);
+      color: var(--black);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-nav {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      border-bottom: 1px solid rgba(255, 85, 0, 0.28);
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      width: min(calc(100% - 2rem), var(--max-width));
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 0 auto;
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .wordmark-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      background: var(--orange);
+      clip-path: polygon(0 0, 100% 0, 100% 72%, 72% 100%, 0 100%);
+      color: var(--black);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.75rem, 2.5vw, 1.8rem);
+    }
+
+    .nav-links a {
+      color: #d8d8d8;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--orange);
+    }
+
+    .nav-book {
+      padding: 0.62rem 0.9rem;
+      background: var(--orange);
+      color: var(--black) !important;
+    }
+
+    .hero-banner {
+      position: relative;
+      min-height: clamp(480px, 67vw, 720px);
+      overflow: hidden;
+      border-bottom: 2px solid var(--orange);
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.68) 48%, rgba(0, 0, 0, 0.16) 78%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.68), transparent 45%),
+        url("attention-deficit-banner.png") center / cover no-repeat,
+        var(--black);
+      box-shadow: 0 12px 36px rgba(255, 85, 0, 0.2);
+    }
+
+    .hero-banner::after {
       position: absolute;
-      z-index: -1;
       inset: 0;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(0, 0, 0, 0.08));
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.016) 0 1px, transparent 1px 4px);
       content: "";
       pointer-events: none;
     }
 
-    .hero-brand {
-      display: flex;
-      width: min(36vw, 430px);
-      min-width: 270px;
-      align-items: center;
-      gap: clamp(0.8rem, 1.7vw, 1.35rem);
-      margin-left: clamp(1.5rem, 6vw, 6rem);
-    }
-
-    .hero-logo-window {
+    .hero-content {
       position: relative;
-      width: clamp(82px, 9vw, 128px);
-      aspect-ratio: 1;
-      flex: 0 0 auto;
-      overflow: hidden;
-    }
-
-    .hero-logo-window img {
-      position: absolute;
-      width: 164%;
-      max-width: none;
-      height: auto;
-      top: -32%;
-      left: -32%;
-    }
-
-    .hero-title {
-      font-size: clamp(1.65rem, 3.2vw, 3.25rem);
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 0.9;
-    }
-
-    .hero-title span {
-      display: block;
-    }
-
-    @media (max-width: 700px) {
-      .hero {
-        height: 225px;
-        align-items: flex-end;
-        background:
-          linear-gradient(90deg, rgba(16, 17, 20, 0.96) 0%, rgba(16, 17, 20, 0.76) 38%, rgba(16, 17, 20, 0.1) 75%),
-          url("header-art.png") 58% center / auto 100% no-repeat,
-          #101114;
-      }
-
-      .hero-brand {
-        width: auto;
-        min-width: 0;
-        gap: 0.75rem;
-        margin: 0 1.1rem 1.2rem;
-      }
-
-      .hero-logo-window {
-        width: 70px;
-      }
-
-      .hero-title {
-        font-size: clamp(1.45rem, 7vw, 2rem);
-      }
-    }
-
-    @media (max-width: 430px) {
-      .hero {
-        height: 205px;
-        background-position: 54% center;
-      }
-    }
-
-    .hero-fallback {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .ticker-wrap {
-      overflow: hidden;
-      padding: 13px 0;
-      background: var(--accent);
-      color: #000;
-      box-shadow: 0 4px 20px rgba(255, 85, 0, 0.25);
-      font-size: clamp(0.85rem, 2vw, 1.05rem);
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      line-height: 1.2;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .ticker {
+      z-index: 1;
       display: flex;
-      width: max-content;
-      animation: marquee 28s linear infinite;
-    }
-
-    .ticker-group {
-      display: flex;
+      width: min(calc(100% - 2rem), var(--max-width));
+      min-height: inherit;
       align-items: center;
-      flex-shrink: 0;
+      margin: 0 auto;
+      padding: 4rem 0;
     }
 
-    .ticker-item {
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 2rem;
-      padding-left: 2rem;
+      gap: 0.65rem;
+      margin: 0 0 1rem;
+      color: var(--orange);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
     }
 
-    .ticker-item::after {
-      content: "•";
+    .eyebrow::before {
+      width: 38px;
+      height: 3px;
+      background: currentColor;
+      content: "";
     }
 
-    @keyframes marquee {
-      to {
-        transform: translateX(-50%);
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    .display-type {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", Arial, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin-bottom: 1rem;
+      font-size: clamp(3.6rem, 10vw, 8.5rem);
+      letter-spacing: -0.045em;
+      line-height: 0.82;
+      text-shadow: 4px 4px 0 var(--black);
+    }
+
+    h1 span {
+      color: var(--orange);
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin-bottom: 2rem;
+      color: #ededed;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      line-height: 1.45;
+      text-transform: none;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.35rem;
+      border: 2px solid var(--orange);
+      background: var(--orange);
+      box-shadow: var(--shadow-orange);
+      color: var(--black);
+      font-weight: 900;
+      letter-spacing: 0.055em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: var(--white);
+      border-color: var(--white);
+    }
+
+    .button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 4px;
+    }
+
+    .airplay {
+      border-bottom: 1px solid var(--line);
+      background: var(--orange);
+      color: var(--black);
+    }
+
+    .airplay-inner {
+      display: grid;
+      width: min(100%, 1440px);
+      margin: 0 auto;
+      grid-template-columns: minmax(230px, 1.1fr) repeat(3, 1fr);
+    }
+
+    .airplay-title,
+    .airplay-name {
+      display: flex;
+      min-height: 86px;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-right: 1px solid rgba(0, 0, 0, 0.32);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .airplay-title {
+      background: var(--black);
+      color: var(--orange);
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+    }
+
+    .airplay-name {
+      font-weight: 950;
+      letter-spacing: -0.015em;
+    }
+
+    .section {
+      padding: clamp(4.5rem, 9vw, 8rem) 1rem;
+    }
+
+    .section-inner {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section-kicker {
+      margin-bottom: 0.7rem;
+      color: var(--orange);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      max-width: 900px;
+      margin-bottom: 1rem;
+      font-size: clamp(2.3rem, 6vw, 5.1rem);
+      letter-spacing: -0.025em;
+      line-height: 0.95;
+    }
+
+    .section-intro {
+      max-width: 740px;
+      margin-bottom: 2.4rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+
+    .listen-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+
+    .signal-list {
+      display: grid;
+      gap: 0.7rem;
+      margin: 1.6rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .signal-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #e2e2e2;
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .signal-list li::before {
+      width: 26px;
+      height: 3px;
+      flex: 0 0 auto;
+      background: var(--orange);
+      box-shadow: 0 0 9px rgba(255, 85, 0, 0.8);
+      content: "";
+    }
+
+    .player-shell {
+      position: relative;
+      padding: clamp(1rem, 3vw, 1.6rem);
+      overflow: hidden;
+      border: 1px solid rgba(255, 85, 0, 0.55);
+      background: rgba(18, 18, 18, 0.78);
+      box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+    }
+
+    .player-shell::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 42%;
+      height: 3px;
+      background: var(--orange);
+      box-shadow: var(--shadow-orange);
+      content: "";
+    }
+
+    .soundcloud-player {
+      display: block;
+      width: 100%;
+      height: 450px;
+      border: 0;
+      background: #1b1b1b;
+    }
+
+    .player-note {
+      margin: 0.8rem 0 0;
+      color: #888;
+      font-size: 0.8rem;
+    }
+
+    .player-note a {
+      color: var(--orange);
+      text-underline-offset: 0.2em;
+    }
+
+    .pillars-section {
+      border-block: 1px solid #191919;
+      background:
+        linear-gradient(135deg, rgba(255, 85, 0, 0.045), transparent 38%),
+        var(--near-black);
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .pillar-card {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      transition: transform 200ms ease, border-color 200ms ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 85, 0, 0.75);
+    }
+
+    .pillar-image {
+      width: 100%;
+      aspect-ratio: 8 / 5;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.14);
+      transition: filter 240ms ease, transform 350ms ease;
+    }
+
+    .pillar-card:hover .pillar-image {
+      transform: scale(1.025);
+      filter: grayscale(20%) contrast(1.08);
+    }
+
+    .pillar-body {
+      padding: clamp(1.35rem, 4vw, 2rem);
+    }
+
+    .pillar-number {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      border: 2px solid var(--orange);
+      background: var(--black);
+      box-shadow: var(--shadow-orange);
+      color: var(--orange);
+      font-family: Impact, Haettenschweiler, sans-serif;
+      font-size: 1.35rem;
+    }
+
+    .pillar-card h3 {
+      margin-bottom: 0.9rem;
+      font-size: clamp(1.55rem, 4vw, 2.4rem);
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+
+    .pillar-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .urgent-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-color: rgba(255, 85, 0, 0.8);
+      background:
+        linear-gradient(160deg, rgba(255, 85, 0, 0.94), rgba(255, 85, 0, 0.44) 42%, rgba(0, 0, 0, 0.92) 75%),
+        repeating-linear-gradient(-45deg, transparent 0 18px, rgba(0, 0, 0, 0.2) 18px 36px),
+        var(--black);
+    }
+
+    .urgent-card::before {
+      position: absolute;
+      top: clamp(2rem, 7vw, 4rem);
+      left: clamp(1.35rem, 4vw, 2rem);
+      max-width: 75%;
+      color: var(--black);
+      content: "SLOT DROPPED?";
+      font-family: Impact, Haettenschweiler, sans-serif;
+      font-size: clamp(3rem, 8vw, 6.6rem);
+      letter-spacing: -0.04em;
+      line-height: 0.83;
+      text-transform: uppercase;
+    }
+
+    .urgent-card .pillar-body {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.97), rgba(0, 0, 0, 0.62), transparent);
+      padding-top: 8rem;
+    }
+
+    .urgent-badge {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.65rem;
+      background: var(--orange);
+      color: var(--black);
+      font-size: 0.7rem;
+      font-weight: 950;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .local-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .local-section::before {
+      position: absolute;
+      right: -3rem;
+      bottom: -5rem;
+      color: rgba(255, 85, 0, 0.055);
+      content: "NE → UK";
+      font-family: Impact, Haettenschweiler, sans-serif;
+      font-size: clamp(7rem, 25vw, 24rem);
+      line-height: 0.8;
+      pointer-events: none;
+    }
+
+    .local-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: center;
+    }
+
+    .location-blocks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+
+    .location-block {
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .location-block strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--orange);
+      font-family: Impact, Haettenschweiler, sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .location-block span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .booking-section {
+      position: relative;
+      border-top: 2px solid var(--orange);
+      background:
+        radial-gradient(circle at 85% 10%, rgba(255, 85, 0, 0.14), transparent 28rem),
+        var(--near-black);
+    }
+
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: clamp(2.5rem, 7vw, 6.5rem);
+      align-items: start;
+    }
+
+    .booking-contact {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .booking-contact a {
+      color: var(--white);
+      font-weight: 800;
+      text-decoration-color: var(--orange);
+      text-underline-offset: 0.25em;
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 1rem;
+      padding: clamp(1.25rem, 4vw, 2.2rem);
+      border: 1px solid rgba(255, 85, 0, 0.65);
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.65);
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    label {
+      color: #e9e9e9;
+      font-size: 0.73rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 85, 0, 0.72);
+      border-radius: 0;
+      outline: 0;
+      background: var(--black);
+      color: var(--white);
+      transition: border-color 150ms ease, box-shadow 150ms ease;
+    }
+
+    input,
+    select {
+      min-height: 52px;
+      padding: 0 0.9rem;
+    }
+
+    textarea {
+      min-height: 170px;
+      padding: 0.9rem;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6f6f6f;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--orange-hot);
+      box-shadow:
+        0 0 0 2px rgba(255, 85, 0, 0.28),
+        0 0 24px rgba(255, 85, 0, 0.48);
+    }
+
+    select {
+      color-scheme: dark;
+    }
+
+    .submit-button {
+      min-height: 56px;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .form-note,
+    .form-status {
+      margin: 0;
+      color: #888;
+      font-size: 0.78rem;
+    }
+
+    .form-status {
+      min-height: 1.2em;
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 2rem;
+    }
+
+    .social-row a {
+      padding: 0.65rem 0.8rem;
+      border: 1px solid var(--line);
+      color: #d2d2d2;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .social-row a:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .site-footer {
+      padding: 1.5rem 1rem;
+      border-top: 1px solid #202020;
+      background: var(--black);
+      color: #777;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-book) {
+        display: none;
+      }
+
+      .hero-banner {
+        min-height: 590px;
+        background-position: 62% center;
+      }
+
+      .listen-layout,
+      .local-grid,
+      .booking-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-card {
+        min-height: 520px;
+      }
+
+      .local-grid {
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-banner {
+        background:
+          linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.34) 68%, rgba(0, 0, 0, 0.18) 100%),
+          url("attention-deficit-banner-mobile.png") center / cover no-repeat,
+          var(--black);
+      }
+
+      .airplay-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .airplay-title,
+      .airplay-name {
+        min-height: 58px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+      }
+
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-card {
+        min-height: 0;
+      }
+
+      .urgent-card {
+        min-height: 540px;
+      }
+
+      .field-row,
+      .location-blocks {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wordmark {
+        font-size: 0.86rem;
+      }
+
+      .wordmark-mark {
+        width: 30px;
+        height: 30px;
+      }
+
+      .nav-book {
+        padding: 0.55rem 0.65rem;
+        font-size: 0.68rem !important;
+      }
+
+      .hero-banner {
+        min-height: 530px;
+        background-position: 69% center;
+      }
+
+      h1 {
+        font-size: clamp(3.35rem, 18vw, 5rem);
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .section {
+        padding-inline: 1rem;
+      }
+
+      .soundcloud-player {
+        height: 400px;
       }
     }
 
@@ -190,282 +987,251 @@
         scroll-behavior: auto;
       }
 
-      .ticker {
-        animation: none;
-      }
-    }
-
-    .main-content {
-      width: min(100%, var(--content-width));
-      margin: 0 auto;
-      padding: clamp(3.25rem, 7vw, 5.5rem) 1.25rem;
-    }
-
-    .grid-split {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-      gap: clamp(2.5rem, 6vw, 5rem);
-      align-items: start;
-      margin-bottom: clamp(3.5rem, 7vw, 6rem);
-    }
-
-    .section-title {
-      margin-bottom: 1.5rem;
-      padding-left: 0.9rem;
-      border-left: 4px solid var(--accent);
-      font-size: clamp(1.55rem, 4vw, 2rem);
-      letter-spacing: 0.06em;
-      line-height: 1.15;
-      text-transform: uppercase;
-    }
-
-    .about-text p {
-      margin-bottom: 1.15rem;
-      color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.1rem);
-    }
-
-    .player-card {
-      overflow: hidden;
-      padding: clamp(1.25rem, 3vw, 1.6rem);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
-    }
-
-    .player-card .section-title {
-      margin-bottom: 1rem;
-      padding: 0;
-      border: 0;
-    }
-
-    .soundcloud-player {
-      display: block;
-      width: 100%;
-      height: 450px;
-      border: 0;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .soundcloud-fallback {
-      margin-top: 0.8rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    .soundcloud-fallback a {
-      text-decoration-color: var(--accent);
-      text-underline-offset: 0.2em;
-    }
-
-    .contact-card {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: clamp(2.25rem, 7vw, 3.5rem) clamp(1.25rem, 6vw, 2.75rem);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-      text-align: center;
-    }
-
-    .contact-card .section-title {
-      margin-bottom: 0.9rem;
-      padding: 0;
-      border: 0;
-    }
-
-    .contact-card > p {
-      max-width: 520px;
-      margin: 0 auto 1.75rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0.9rem 2rem;
-      background: #fff;
-      color: #000;
-      border-radius: 8px;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
-    }
-
-    .button:hover {
-      background: var(--accent);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
-    .button:focus-visible,
-    .social-link:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 4px;
-    }
-
-    .social-strip {
-      display: flex;
-      justify-content: center;
-      gap: clamp(1rem, 5vw, 2rem);
-      margin-top: 2.5rem;
-      padding-top: 1.75rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .social-link {
-      display: inline-flex;
-      width: 52px;
-      height: 52px;
-      align-items: center;
-      justify-content: center;
-      background: var(--surface-hover);
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      text-decoration: none;
-      transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
-    }
-
-    .social-link:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: translateY(-3px);
-    }
-
-    .social-link img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .footer {
-      padding: 1.5rem 1.25rem 2rem;
-      color: #77777d;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 760px) {
-      .grid-split {
-        grid-template-columns: 1fr;
-      }
-
-      .soundcloud-player {
-        height: 400px;
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="hero" aria-label="Attention Deficit">
-    <div class="hero-brand">
-      <div class="hero-logo-window" aria-hidden="true">
-        <img src="attention-deficit-logo.png" alt="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="wordmark" href="#top" aria-label="Attention Deficit UK — home">
+        <span class="wordmark-mark" aria-hidden="true">AD</span>
+        <span>Attention Deficit UK</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#listen">Listen</a>
+        <a href="#services">Services</a>
+        <a href="#locations">Locations</a>
+        <a class="nav-book" href="#booking-hub">Book now</a>
       </div>
-      <div class="hero-title">
-        <span>Attention</span>
-        <span>Deficit</span>
+    </div>
+  </nav>
+
+  <header class="hero-banner" id="top">
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">North East born · UK ready</p>
+        <h1>Attention <span>Deficit UK</span></h1>
+        <h2 class="hero-subtitle">Live Looping Electronic Act, House &amp; Breakbeat DJ, Premium Media Sync</h2>
+        <a class="button" href="#booking-hub">Book Live Act / Urgent DJ Cover</a>
       </div>
     </div>
   </header>
 
-  <div class="ticker-wrap" aria-label="Artist highlights">
-    <div class="ticker">
-      <div class="ticker-group">
-        <span class="ticker-item">BBC Radio 1 playback</span>
-        <span class="ticker-item">UK DJ &amp; producer</span>
-        <span class="ticker-item">New releases out now</span>
-        <span class="ticker-item">Bookings &amp; remixes</span>
+  <main id="main-content">
+    <section class="airplay" aria-labelledby="airplay-title">
+      <div class="airplay-inner">
+        <div class="airplay-title" id="airplay-title">Supported Internationally Via</div>
+        <div class="airplay-name">BBC Introducing</div>
+        <div class="airplay-name">Select FM</div>
+        <div class="airplay-name">International Club DJs</div>
       </div>
-      <div class="ticker-group" aria-hidden="true">
-        <span class="ticker-item">BBC Radio 1 playback</span>
-        <span class="ticker-item">UK DJ &amp; producer</span>
-        <span class="ticker-item">New releases out now</span>
-        <span class="ticker-item">Bookings &amp; remixes</span>
+    </section>
+
+    <section class="section" id="listen">
+      <div class="section-inner listen-layout">
+        <div>
+          <p class="section-kicker">Transmission 001</p>
+          <h2 class="section-heading">Built for movement. Made with intent.</h2>
+          <p class="section-intro">Raw club energy, intricate rhythm structures and live electronic instincts—direct from the studio to the floor.</p>
+
+          <ul class="signal-list" aria-label="Music highlights">
+            <li>Original productions</li>
+            <li>Live hardware sessions</li>
+            <li>House and breakbeat selections</li>
+          </ul>
+        </div>
+
+        <div class="player-shell">
+          <iframe
+            class="soundcloud-player"
+            title="Attention Deficit UK on SoundCloud"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fjoe-thwaites-1&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
+            allow="autoplay"
+            loading="lazy"
+          ></iframe>
+          <p class="player-note">Player unavailable? <a href="https://soundcloud.com/joe-thwaites-1/tracks" target="_blank" rel="noopener noreferrer">Open all tracks on SoundCloud</a>.</p>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <main class="main-content">
-    <div class="grid-split">
-      <section class="about-text" aria-labelledby="about-title">
-        <h1 class="section-title" id="about-title">About</h1>
-        <p>Forging heavy basslines with complex, high-energy rhythm structures, Attention Deficit has rapidly caught the ears of underground electronic music tastemakers across the UK.</p>
-        <p>Regularly supported by airplay and driving heavy club sets, the production merges pristine sound engineering with relentless energy.</p>
-      </section>
+    <section class="section pillars-section" id="services">
+      <div class="section-inner">
+        <p class="section-kicker">Four modes. One signal.</p>
+        <h2 class="section-heading">Performance, pressure and sound with an edge.</h2>
+        <p class="section-intro">From improvised live electronics to a suddenly empty festival slot, Attention Deficit UK brings the instincts, preparation and sound to make the moment land.</p>
 
-      <section class="player-card" aria-labelledby="listen-title">
-        <h2 class="section-title" id="listen-title">Listen</h2>
-        <iframe
-          class="soundcloud-player"
-          title="Attention Deficit on SoundCloud"
-          src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fjoe-thwaites-1&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-          allow="autoplay"
-          loading="lazy"
-        ></iframe>
-        <p class="soundcloud-fallback">
-          Player not loading?
-          <a href="https://soundcloud.com/joe-thwaites-1/tracks" target="_blank" rel="noopener noreferrer">Open all tracks on SoundCloud</a>.
-        </p>
-      </section>
-    </div>
+        <div class="pillar-grid">
+          <article class="pillar-card">
+            <span class="pillar-number" aria-hidden="true">01</span>
+            <img class="pillar-image" src="live-hardware-setup.jpg" alt="Attention Deficit UK performing a live electronic hardware looping set" width="1600" height="1000" loading="lazy">
+            <div class="pillar-body">
+              <h3>Live Hardware Looping</h3>
+              <p>An improvised, high-energy live electronic music set that builds tracks from scratch in real time. Hardware, loops and instinct form a hypnotic sonic journey—underground club pressure with the danger and immediacy of genuine live performance.</p>
+            </div>
+          </article>
 
-    <section class="contact-card" aria-labelledby="contact-title">
-      <h2 class="section-title" id="contact-title">Bookings &amp; enquiries</h2>
-      <p>For club bookings, press, general enquiries or remix requests, get in touch directly.</p>
-      <a class="button" href="mailto:info@attentiondeficit.uk">Send email</a>
+          <article class="pillar-card">
+            <span class="pillar-number" aria-hidden="true">02</span>
+            <img class="pillar-image" src="festival-dj-booth.jpg" alt="House and Breakbeat DJ performing from a festival booth" width="1600" height="1000" loading="lazy">
+            <div class="pillar-body">
+              <h3>House &amp; Breakbeat Sets</h3>
+              <p>Deep roots in underground electronic music stretching back to the 1990s. Evolving House sets move from groove-heavy club tracks to sun-drenched Balearic energy, sharpened with tribal flavours and precisely placed breakbeat cuts.</p>
+            </div>
+          </article>
 
-      <nav class="social-strip" aria-label="Follow Attention Deficit">
-        <a
-          class="social-link"
-          href="https://soundcloud.com/joe-thwaites-1"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Attention Deficit on SoundCloud"
-          title="SoundCloud"
-        >
-          <img src="https://cdn.simpleicons.org/soundcloud/ffffff" alt="" width="24" height="24">
-        </a>
-        <a
-          class="social-link"
-          href="https://www.instagram.com/attentiondeficitproducer/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Attention Deficit on Instagram"
-          title="Instagram"
-        >
-          <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="" width="24" height="24">
-        </a>
-        <a
-          class="social-link"
-          href="https://www.tiktok.com/@attentiondeficitproducer"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Attention Deficit on TikTok"
-          title="TikTok"
-        >
-          <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="" width="24" height="24">
-        </a>
-      </nav>
+          <article class="pillar-card urgent-card">
+            <span class="pillar-number" aria-hidden="true">03</span>
+            <div class="pillar-body">
+              <span class="urgent-badge">Urgent bookings · UK-wide</span>
+              <h3>Last-Minute Festival &amp; DJ Cover</h3>
+              <p>A reliable answer when a lineup slot suddenly falls through. Festival coordinators and nightlife promoters can call on a prepared, crowd-aware emergency cover DJ ready to step up, take control of the decks and hold down the room at short notice.</p>
+            </div>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-number" aria-hidden="true">04</span>
+            <img class="pillar-image" src="sync-media-cover.jpg" alt="Bespoke commercial sync licensing and custom electronic scoring" width="1600" height="1000" loading="lazy">
+            <div class="pillar-body">
+              <h3>Premium Sync &amp; Corporate Audio</h3>
+              <p>A credible alternative to bland, soulless stock music. Commercial video, brand campaigns and independent films get legitimate, edge-driven club soundtracks, bespoke commercial sync licensing, custom scoring and tailored remixes.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section local-section" id="locations">
+      <div class="section-inner local-grid">
+        <div>
+          <p class="section-kicker">Local roots · national reach</p>
+          <h2 class="section-heading">House &amp; Breakbeat DJ, North East to the whole UK.</h2>
+          <p class="section-intro">Based around Newcastle, Sunderland and the North East, with UK-wide availability for festivals, venue sets, last-minute emergency DJ cover, live electronic hardware looping and media projects.</p>
+          <a class="button" href="#booking-hub">Check availability</a>
+        </div>
+
+        <div class="location-blocks" aria-label="Service locations">
+          <div class="location-block">
+            <strong>Newcastle</strong>
+            <span>Clubs, venues, private bookings and live electronic performance.</span>
+          </div>
+          <div class="location-block">
+            <strong>Sunderland</strong>
+            <span>Local DJ sets, event cover and original electronic music.</span>
+          </div>
+          <div class="location-block">
+            <strong>North East</strong>
+            <span>House, Breakbeat, Balearic and live looping across the region.</span>
+          </div>
+          <div class="location-block">
+            <strong>United Kingdom</strong>
+            <span>Festival bookings, urgent cover and bespoke commercial sync.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking-hub">
+      <div class="section-inner booking-layout">
+        <div>
+          <p class="section-kicker">Booking hub</p>
+          <h2 class="section-heading">Tell me what needs to happen.</h2>
+          <p class="section-intro">Live set, festival slot, urgent cover or a soundtrack with an actual pulse—send the essentials and start the conversation.</p>
+
+          <div class="booking-contact">
+            <span>Email</span>
+            <a href="mailto:info@attentiondeficit.uk">info@attentiondeficit.uk</a>
+          </div>
+
+          <div class="social-row" aria-label="Attention Deficit UK social profiles">
+            <a href="https://soundcloud.com/joe-thwaites-1" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+            <a href="https://www.instagram.com/attentiondeficitproducer/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@attentiondeficitproducer" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+
+        <form class="booking-form" id="booking-form" action="mailto:info@attentiondeficit.uk" method="post" enctype="text/plain">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+
+            <div class="field">
+              <label for="contact">Email / Phone</label>
+              <input id="contact" name="contact" type="text" autocomplete="email" placeholder="How should I reach you?" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="inquiry-type">Inquiry type</label>
+            <select id="inquiry-type" name="inquiry_type" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Live Looping Performance</option>
+              <option>Festival / Venue DJ Set</option>
+              <option>Last-Minute Emergency Cover</option>
+              <option>Media Sync / Custom Scoring</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="details">Project details</label>
+            <textarea id="details" name="project_details" placeholder="Date, location, timescale, venue or project, and anything else I should know." required></textarea>
+          </div>
+
+          <button class="button submit-button" type="submit">Send booking enquiry</button>
+          <p class="form-note">Submitting opens your email app with the enquiry completed. Nothing is stored on this website.</p>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    &copy; <span id="year"></span> Attention Deficit
+  <footer class="site-footer">
+    &copy; <span id="year"></span> Attention Deficit UK · Newcastle · Sunderland · North East · UK-wide
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const bookingForm = document.getElementById("booking-form");
+    const formStatus = document.getElementById("form-status");
+
+    bookingForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!bookingForm.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(bookingForm);
+      const inquiryType = formData.get("inquiry_type");
+      const subject = "Attention Deficit UK enquiry — " + inquiryType;
+      const body = [
+        "Name: " + formData.get("name"),
+        "Email / Phone: " + formData.get("contact"),
+        "Inquiry type: " + inquiryType,
+        "",
+        "Project details:",
+        formData.get("project_details")
+      ].join("\n");
+
+      formStatus.textContent = "Opening your email app…";
+      window.location.href =
+        "mailto:info@attentiondeficit.uk?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+    });
   </script>
 </body>
 </html>
