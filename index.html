@@ -195,27 +195,6 @@
       font: inherit;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family:
-        Impact,
-        Haettenschweiler,
-        "Arial Narrow Bold",
-        "Arial Narrow",
-        Arial,
-        sans-serif;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
     .skip-link {
       position: fixed;
       z-index: 999;
@@ -233,17 +212,6 @@
       transform: translateY(0);
     }
 
-    .visually-hidden {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      overflow: hidden !important;
-      clip: rect(0, 0, 0, 0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
-    }
-
     .site-nav {
       position: sticky;
       z-index: 100;
@@ -256,7 +224,7 @@
     .nav-inner {
       display: flex;
       width: min(calc(100% - 2rem), var(--max-width));
-      min-height: 68px;
+      min-height: 72px;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
@@ -266,28 +234,35 @@
     .wordmark {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
+      gap: 0.85rem;
       font-family:
         Impact,
         Haettenschweiler,
         "Arial Narrow Bold",
         sans-serif;
-      font-size: 1.05rem;
+      font-size: 1.16rem;
       letter-spacing: 0.08em;
       text-decoration: none;
       text-transform: uppercase;
     }
 
     .wordmark-mark {
-      display: grid;
-      width: 34px;
-      height: 34px;
-      place-items: center;
-      background: var(--orange);
-      clip-path: polygon(0 0, 100% 0, 100% 72%, 72% 100%, 0 100%);
-      color: var(--black);
-      font-size: 1.2rem;
-      font-weight: 900;
+      position: relative;
+      display: block;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .wordmark-mark img {
+      position: absolute;
+      top: -24%;
+      left: -24%;
+      width: 148%;
+      max-width: none;
+      height: auto;
     }
 
     .nav-links {
@@ -338,6 +313,17 @@
         );
       content: "";
       pointer-events: none;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
 
     .button {
@@ -434,10 +420,20 @@
 
     .section-heading {
       max-width: 900px;
+      margin-top: 0;
       margin-bottom: 1rem;
+      font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        "Arial Narrow",
+        Arial,
+        sans-serif;
       font-size: clamp(2.3rem, 6vw, 5.1rem);
+      font-weight: 900;
       letter-spacing: -0.025em;
       line-height: 0.95;
+      text-transform: uppercase;
     }
 
     .section-intro {
@@ -542,7 +538,6 @@
 
     .pillar-card {
       position: relative;
-      min-height: 560px;
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -557,18 +552,16 @@
     }
 
     .pillar-image {
+      display: block;
       width: 100%;
-      aspect-ratio: 8 / 5;
-      object-fit: cover;
-      filter: grayscale(100%) contrast(1.14);
-      transition:
-        filter 240ms ease,
-        transform 350ms ease;
+      height: auto;
+      object-fit: contain;
+      filter: none;
     }
 
     .pillar-card:hover .pillar-image {
-      transform: scale(1.025);
-      filter: grayscale(20%) contrast(1.08);
+      transform: none;
+      filter: none;
     }
 
     .pillar-body {
@@ -577,6 +570,7 @@
 
     .pillar-number {
       position: absolute;
+      z-index: 2;
       top: 1rem;
       right: 1rem;
       display: grid;
@@ -587,18 +581,22 @@
       background: var(--black);
       box-shadow: var(--shadow-orange);
       color: var(--orange);
-      font-family:
-        Impact,
-        Haettenschweiler,
-        sans-serif;
+      font-family: Impact, Haettenschweiler, sans-serif;
       font-size: 1.35rem;
     }
 
     .pillar-card h3 {
+      margin-top: 0;
       margin-bottom: 0.9rem;
+      font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
       font-size: clamp(1.55rem, 4vw, 2.4rem);
       letter-spacing: -0.01em;
       line-height: 1;
+      text-transform: uppercase;
     }
 
     .pillar-card p {
@@ -608,6 +606,7 @@
 
     .urgent-card {
       display: flex;
+      min-height: 560px;
       flex-direction: column;
       justify-content: flex-end;
       border-color: rgba(255, 85, 0, 0.8);
@@ -633,10 +632,7 @@
       max-width: 75%;
       color: var(--black);
       content: "SLOT DROPPED?";
-      font-family:
-        Impact,
-        Haettenschweiler,
-        sans-serif;
+      font-family: Impact, Haettenschweiler, sans-serif;
       font-size: clamp(3rem, 8vw, 6.6rem);
       letter-spacing: -0.04em;
       line-height: 0.83;
@@ -678,11 +674,8 @@
       right: -3rem;
       bottom: -5rem;
       color: rgba(255, 85, 0, 0.055);
-      content: "NE TO UK";
-      font-family:
-        Impact,
-        Haettenschweiler,
-        sans-serif;
+      content: "NE → UK";
+      font-family: Impact, Haettenschweiler, sans-serif;
       font-size: clamp(7rem, 25vw, 24rem);
       line-height: 0.8;
       pointer-events: none;
@@ -712,10 +705,7 @@
       display: block;
       margin-bottom: 0.35rem;
       color: var(--orange);
-      font-family:
-        Impact,
-        Haettenschweiler,
-        sans-serif;
+      font-family: Impact, Haettenschweiler, sans-serif;
       font-size: 1.4rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -894,10 +884,6 @@
         grid-template-columns: 1fr;
       }
 
-      .pillar-card {
-        min-height: 520px;
-      }
-
       .local-grid {
         gap: 2.5rem;
       }
@@ -926,10 +912,6 @@
         grid-template-columns: 1fr;
       }
 
-      .pillar-card {
-        min-height: 0;
-      }
-
       .urgent-card {
         min-height: 540px;
       }
@@ -942,12 +924,13 @@
 
     @media (max-width: 520px) {
       .wordmark {
-        font-size: 0.86rem;
+        gap: 0.7rem;
+        font-size: 0.95rem;
       }
 
       .wordmark-mark {
-        width: 30px;
-        height: 30px;
+        width: 38px;
+        height: 38px;
       }
 
       .nav-book {
@@ -990,7 +973,9 @@
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a class="wordmark" href="#top" aria-label="Attention Deficit — home">
-        <span class="wordmark-mark" aria-hidden="true">AD</span>
+        <span class="wordmark-mark" aria-hidden="true">
+          <img src="attention-deficit-logo.png" alt="">
+        </span>
         <span>Attention Deficit</span>
       </a>
 
@@ -1028,7 +1013,6 @@
           <h2 class="section-heading">
             Built for movement. Made with intent.
           </h2>
-
           <p class="section-intro">
             Raw club energy, intricate rhythm structures and live electronic
             instincts—direct from the studio to the floor.
@@ -1056,9 +1040,7 @@
               href="https://soundcloud.com/joe-thwaites-1/tracks"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Open all tracks on SoundCloud
-            </a>.
+            >Open all tracks on SoundCloud</a>.
           </p>
         </div>
       </div>
@@ -1067,11 +1049,9 @@
     <section class="section pillars-section" id="services">
       <div class="section-inner">
         <p class="section-kicker">Four modes. One signal.</p>
-
         <h2 class="section-heading">
           Performance, pressure and sound with an edge.
         </h2>
-
         <p class="section-intro">
           From improvised live electronics to a suddenly empty festival slot,
           Attention Deficit brings the instincts, preparation and sound to make
@@ -1086,14 +1066,13 @@
               class="pillar-image"
               src="live-hardware-setup.png"
               alt="Attention Deficit performing a live electronic hardware looping set"
-              width="1600"
-              height="1000"
+              width="1000"
+              height="1600"
               loading="lazy"
             >
 
             <div class="pillar-body">
               <h3>Live Hardware Looping</h3>
-
               <p>
                 An improvised, high-energy live electronic music set that builds
                 tracks from scratch in real time. Hardware, loops and instinct
@@ -1110,14 +1089,13 @@
               class="pillar-image"
               src="festival-dj-booth.png"
               alt="Attention Deficit performing a journey-led Balearic and electronic DJ set"
-              width="1600"
-              height="1000"
+              width="1000"
+              height="1600"
               loading="lazy"
             >
 
             <div class="pillar-body">
               <h3>Balearic &amp; Journey-Led DJ Sets</h3>
-
               <p>
                 Deep roots in electronic music stretching back to the 1990s.
                 Flexible one-to-four-hour sets build a genuine journey through
@@ -1131,12 +1109,8 @@
             <span class="pillar-number" aria-hidden="true">03</span>
 
             <div class="pillar-body">
-              <span class="urgent-badge">
-                Urgent bookings · UK-wide
-              </span>
-
+              <span class="urgent-badge">Urgent bookings · UK-wide</span>
               <h3>Last-Minute Festival &amp; DJ Cover</h3>
-
               <p>
                 A reliable answer when a lineup slot suddenly falls through.
                 Festival coordinators and nightlife promoters can call on a
@@ -1153,14 +1127,13 @@
               class="pillar-image"
               src="sync-media-cover.png"
               alt="Bespoke commercial sync licensing and custom electronic scoring"
-              width="1600"
-              height="1000"
+              width="1000"
+              height="1600"
               loading="lazy"
             >
 
             <div class="pillar-body">
               <h3>Premium Sync &amp; Corporate Audio</h3>
-
               <p>
                 A credible alternative to bland, soulless stock music.
                 Commercial video, brand campaigns and independent films get
@@ -1177,21 +1150,16 @@
       <div class="section-inner local-grid">
         <div>
           <p class="section-kicker">Local roots · national reach</p>
-
           <h2 class="section-heading">
             Journey-led DJ sets, North East to the whole UK.
           </h2>
-
           <p class="section-intro">
             Based around Newcastle, Sunderland and the North East, with UK-wide
             availability for one-to-four-hour festival and venue sets,
             last-minute emergency DJ cover, live electronic hardware looping
             and media projects.
           </p>
-
-          <a class="button" href="#booking-hub">
-            Check availability
-          </a>
+          <a class="button" href="#booking-hub">Check availability</a>
         </div>
 
         <div class="location-blocks" aria-label="Service locations">
@@ -1231,14 +1199,10 @@
       <div class="section-inner booking-layout">
         <div>
           <p class="section-kicker">Booking hub</p>
-
-          <h2 class="section-heading">
-            Tell me what needs to happen.
-          </h2>
-
+          <h2 class="section-heading">Tell me what needs to happen.</h2>
           <p class="section-intro">
-            Live set, festival slot, urgent cover or a soundtrack with an actual
-            pulse—send the essentials and start the conversation.
+            Live set, festival slot, urgent cover or a soundtrack with an
+            actual pulse—send the essentials and start the conversation.
           </p>
 
           <div class="booking-contact">
@@ -1248,33 +1212,24 @@
             </a>
           </div>
 
-          <div
-            class="social-row"
-            aria-label="Attention Deficit social profiles"
-          >
+          <div class="social-row" aria-label="Attention Deficit social profiles">
             <a
               href="https://soundcloud.com/joe-thwaites-1"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              SoundCloud
-            </a>
+            >SoundCloud</a>
 
             <a
               href="https://www.instagram.com/attentiondeficitproducer/"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
+            >Instagram</a>
 
             <a
               href="https://www.tiktok.com/@attentiondeficitproducer"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              TikTok
-            </a>
+            >TikTok</a>
           </div>
         </div>
 
@@ -1288,7 +1243,6 @@
           <div class="field-row">
             <div class="field">
               <label for="name">Name</label>
-
               <input
                 id="name"
                 name="name"
@@ -1301,7 +1255,6 @@
 
             <div class="field">
               <label for="contact">Email / Phone</label>
-
               <input
                 id="contact"
                 name="contact"
@@ -1315,37 +1268,21 @@
 
           <div class="field">
             <label for="inquiry-type">Inquiry type</label>
-
             <select
               id="inquiry-type"
               name="inquiry_type"
               required
             >
-              <option value="" selected disabled>
-                Select one
-              </option>
-
-              <option>
-                Live Looping Performance
-              </option>
-
-              <option>
-                Festival / Venue DJ Set
-              </option>
-
-              <option>
-                Last-Minute Emergency Cover
-              </option>
-
-              <option>
-                Media Sync / Custom Scoring
-              </option>
+              <option value="" selected disabled>Select one</option>
+              <option>Live Looping Performance</option>
+              <option>Festival / Venue DJ Set</option>
+              <option>Last-Minute Emergency Cover</option>
+              <option>Media Sync / Custom Scoring</option>
             </select>
           </div>
 
           <div class="field">
             <label for="details">Project details</label>
-
             <textarea
               id="details"
               name="project_details"
@@ -1354,10 +1291,7 @@
             ></textarea>
           </div>
 
-          <button
-            class="button submit-button"
-            type="submit"
-          >
+          <button class="button submit-button" type="submit">
             Send booking enquiry
           </button>
 
@@ -1382,14 +1316,10 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const bookingForm =
-      document.getElementById("booking-form");
-
-    const formStatus =
-      document.getElementById("form-status");
+    const bookingForm = document.getElementById("booking-form");
+    const formStatus = document.getElementById("form-status");
 
     bookingForm.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -1398,14 +1328,9 @@
         return;
       }
 
-      const formData =
-        new FormData(bookingForm);
-
-      const inquiryType =
-        formData.get("inquiry_type");
-
-      const subject =
-        "Attention Deficit enquiry — " + inquiryType;
+      const formData = new FormData(bookingForm);
+      const inquiryType = formData.get("inquiry_type");
+      const subject = "Attention Deficit enquiry — " + inquiryType;
 
       const body = [
         "Name: " + formData.get("name"),
@@ -1416,8 +1341,7 @@
         formData.get("project_details")
       ].join("\n");
 
-      formStatus.textContent =
-        "Opening your email app…";
+      formStatus.textContent = "Opening your email app…";
 
       window.location.href =
         "mailto:info@attentiondeficit.uk?subject=" +
